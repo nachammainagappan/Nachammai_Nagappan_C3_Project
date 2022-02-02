@@ -75,4 +75,9 @@ public class Restaurant {
         this.openingTime = openingTime;
     }
 
+    //Assuming item in the order is always present in the menu as specified in the requirements
+
+    public int getOrderPrice(String[] OrderList) {
+        return 0;
+    }
 }

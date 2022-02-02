@@ -64,4 +64,10 @@ class RestaurantTest {
     }
     //<<<<<<<<<<<<<<<<<<<<<<<MENU>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
+    @Test
+    public void getOrderPrice_should_return_correct_order_value() {
+        String[] orderList = new String[]{"Spaghetti", "Pizza"};
+        assertEquals(1300,restaurant2.getOrderPrice(orderList));
+    }
+
 }
