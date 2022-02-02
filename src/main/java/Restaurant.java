@@ -76,8 +76,21 @@ public class Restaurant {
     }
 
     //Assuming item in the order is always present in the menu as specified in the requirements
-
+    public int getItemPrice(String itemName) {
+        int itemPrice = 0;
+        for(Item item: menu) {
+            if(item.getName().equals(itemName)) {
+                itemPrice = item.getPrice();
+            }
+        }
+        return itemPrice;
+    }
     public int getOrderPrice(String[] OrderList) {
-        return 0;
+        int totalPrice = 0;
+        for(String order: OrderList) {
+            int price = getItemPrice(order);
+            totalPrice += price;
+        }
+        return totalPrice;
     }
 }
